@@ -63,5 +63,53 @@ The pipeline is engineered for modularity and scalability:
    git clone [https://github.com/your-username/real-estate-intel-agent.git](https://github.com/your-username/real-estate-intel-agent.git)
    cd real-estate-intel-agent
    ```
+   
+2. **Environment Configuration**  Create a .env file in the root directory and populate your credentials:
+```
+GROQ_API_KEY=your_secure_api_key_here
+```
 
+3. **Dependency Deployment**
+```
+pip install -r requirements.txt
+```
 
+4. **Launch Interface**
+
+```
+streamlit run main.py
+```
+
+## 🕹️ Usage Guide
+
+1.  **Knowledge Injection**: Input up to 3 URLs in the sidebar (e.g., market reports, tax guidelines).
+2.  **Indexing**: Click `Process URLs`. The system will tokenize and embed the data into the local vector store.
+3.  **Contextual Querying**: Ask complex questions like *"Summarize the tax implications for NRI property owners in Panchkula."*
+4.  **Verification**: Expand the **Sources** section to view the specific documentation utilized by the LLM.
+
+---
+
+## 📂 Directory Structure
+
+```text
+├── main.py              # Streamlit UI & Application Logic
+├── rag.py               # Core RAG Engine (Scraping, Vector Store, LLM Chain)
+├── requirements.txt     # Python Project Dependencies
+├── .env                 # API Keys & Secrets (Not to be committed)
+└── vector_db/           # ChromaDB Persistent Storage
+```
+
+## 🤝 Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create.
+1. Fork the Project.
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature).
+3. Commit your Changes (git commit -m 'Add some AmazingFeature').
+4. Push to the Branch (git push origin feature/AmazingFeature).
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+Distributed under the MIT License. See LICENSE for more information.
+
+<div align="center"> Built with ❤️ for the Real Estate Tech Community </div>
